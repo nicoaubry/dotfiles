@@ -1,0 +1,3 @@
+source ~/dotfiles/macosx/bash/profile_base.sh
+source ~/dotfiles/macosx/bash/profile_sys.sh
+source ~/dotfiles/macosx/bash/profile_dev.sh
