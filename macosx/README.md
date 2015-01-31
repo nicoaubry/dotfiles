@@ -78,5 +78,5 @@ $ git clone https://github.com/nicoaubry/tools.git
 $ cd ~
 $ ln -s ~/dotfiles/macosx/bash/bash_profile .bash_profile
 $ source .bash_profile
-$ ln -s ~/dotfiles/git/gitconfig .gitconfig
+$ ln -s ~/dotfiles/macosx/git/gitconfig .gitconfig
 ```

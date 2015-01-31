@@ -1,6 +1,6 @@
 [core]
 	editor = atom
-	excludesfile = /Users/nico/dotfiles/git/gitignore
+	excludesfile = /Users/nico/dotfiles/macosx/git/gitignore
 [credential]
 	helper = osxkeychain
 [color]
