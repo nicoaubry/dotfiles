@@ -64,11 +64,11 @@ $ brew cask install vimr
 $ brew cask install vlc
 ```
 
-### Clone tools
+### Clone dotfiles
 
 ```bash
 $ cd ~
-$ git clone https://github.com/nicoaubry/tools.git
+$ git clone https://github.com/nicoaubry/dotfiles.git
 ```
 
 ### Softlinks and Folders
