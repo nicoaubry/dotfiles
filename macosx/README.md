@@ -1,6 +1,4 @@
-# tools@nicoaubry
-
-## Development Setup
+# dotfiles@nicoaubry
 
 ### Xcode Install
 

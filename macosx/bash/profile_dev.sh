@@ -16,7 +16,7 @@ launchctl setenv PATH $PATH
 # -------
 # Aliases
 # -------
-alias lgit='cd ~/Git'
+alias lgit='cd ~/Development/git'
 
 
 # --------
