@@ -1,0 +1,6 @@
+" plugin ctrlp: fuzzy file search
+" http://kien.github.io/ctrlp.vim/
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+" plugin nerd tree (not working)
+" https://github.com/scrooloose/nerdtree

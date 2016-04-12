@@ -1,6 +1,3 @@
-[core]
-	editor = atom
-	excludesfile = /Users/nico/dotfiles/macosx/git/gitignore
 [credential]
 	helper = osxkeychain
 [color]
@@ -18,6 +15,3 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-[user]
-	name = nicoaubry@gmail.com
-	email = nicoaubry@gmail.com

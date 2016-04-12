@@ -56,6 +56,7 @@ $ brew cask install dropbox
 $ brew cask install istat-menus
 $ brew cask install iterm2
 $ brew cask install atom
+$ brew cask install paw
 # idea ultimate -> brew cask install intellij-idea
 $ brew cask install intellij-idea-ce
 $ brew cask install skype
