@@ -57,10 +57,13 @@ alias cleanls="/System/Library/Frameworks/CoreServices.framework/Frameworks/Laun
 # Find
 # ----
 alias qfind='sudo find . -name '                                  # Quick find file
+alias qfindpattern="sudo grep -rnw '.' -e "                       # Quick find pattern in files from current directory
 alias qspot='fn_spotlight'                                        # Spotlight find file
 alias qexe='type -all'                                            # Find executables
 alias cpath='echo -e ${PATH//:/\\n}'                              # Echo all executable Paths
 alias cdir='open -a Finder ./'                                    # Opens current directory in MacOS Finder
+#sudo grep -lr "WebSocket" --include \*.scala .                    # Find files with gievn extension and containing given string
+
 
 
 # ----------

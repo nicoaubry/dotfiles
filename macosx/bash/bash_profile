@@ -43,7 +43,8 @@ export PS1="\n$C_LIGHTGREEN\u$C_DEFAULT@$C_LIGHTCYAN\h$C_DEFAULT [\w] \$$C_DEFAU
 export USER_HOME="/Users/nicolasaubry"
 export DEV_HOME="$USER_HOME/Devs"
 export GIT_HOME="$USER_HOME/Devs/git"
-export DOTFILES="$GIT_HOME/nicoaubry/dotfiles/macosx"
+export GIT_NICO_HOME="$GIT_HOME/thepotatofield"
+export DOTFILES="$GIT_NICO_HOME/dotfiles/macosx"
 export PATH="$PATH:/usr/local/bin:/opt/local/bin:$DOTFILES/bash:$DOTFILES/bash/scripts"
 
 # ---------------------

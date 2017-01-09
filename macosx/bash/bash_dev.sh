@@ -1,23 +1,29 @@
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export SCALA_HOME="/usr/local/opt/scala"
+
 export MAVEN_HOME="/usr/local/opt/maven"
 export M2_REPO="$USER_HOME/.m2"
-export TOMCAT_HOME="/usr/local/opt/tomcat/libexec"
 
-export PATH="$PATH:$JAVA_HOME:$MAVEN_HOME:$SCALA_HOME:$TOMCAT_HOME"
+# export TOMCAT_HOME="/usr/local/opt/tomcat/libexec"
+
+export PATH="$PATH:$JAVA_HOME:$MAVEN_HOME:$SCALA_HOME"
 
 # Aliases
 alias ldev='cd $DEV_HOME; ll;'
 alias lgit='cd $GIT_HOME; ll;'
-alias lgithub='cd $GIT_HOME/nicoaubry; ll;'
-alias lhg='cd $DEV_HOME/hg; ll;'
-alias lm2='cd $M2_REPO/repository; ll | more;'
+alias lmaven='cd $M2_REPO/repository; ll | more;'
+
+# alias lpf='cd $GIT_NICO_HOME; ll;'
+# alias lhg='cd $DEV_HOME/hg; ll;'
+
+alias scala='scala -Dscala.color=true'
 
 # Atom instance from $DEV_HOME
-alias edev='atom $DEV_HOME &'
+# alias edev='atom $DEV_HOME &'
+# alias epf='atom $GIT_NICO_HOME &'
 
 # Local CouchDB
-alias couchdb-ui='ssh-couchdb-dev; fauxton -c "http://localhost:5985"'
+# alias couchdb-ui='ssh-couchdb-dev; fauxton -c "http://localhost:5985"'
 
 # Local Redis
 alias redis-server='redis-server /usr/local/etc/redis.conf'
