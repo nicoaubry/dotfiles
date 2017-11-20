@@ -1,20 +1,20 @@
-# Always list directory contents upon 'cd'
-fn_cd() {
-  builtin cd "$@"; ll;
-}
+#!/bin/sh
+
+# List directory contents upon 'cd'
+lcd() { builtin cd "$@"; ll; }
 
 # Search for a file using MacOS Spotlight's metadata
-fn_spotlight() {
+spot() {
   mdfind "kMDItemDisplayName == '$@'wc";
 }
 
 # To create a ZIP archive of a folder
-fn_quick_zip() {
+qzip() {
   zip -r "$1".zip "$1";
 }
 
 # Extract most known archives with one command
-fn_quick_extract() {
+qextract() {
     if [ -f $1 ] ; then
       case $1 in
         *.tar.bz2)   tar xjf $1     ;;
@@ -49,19 +49,6 @@ fn_ps_of() {
    ps -ef | grep "$@" ;
 }
 
-# Display useful host related informaton
-fn_host_info() {
-    echo -e "\nYou are logged on ${RED}$HOST"
-    echo -e "\nAdditionnal information:$NC " ; uname -a
-    echo -e "\n${RED}Users logged on:$NC " ; w -h
-    echo -e "\n${RED}Current date :$NC " ; date
-    echo -e "\n${RED}Machine stats :$NC " ; uptime
-    echo -e "\n${RED}Current network location :$NC " ; scselect
-    echo -e "\n${RED}Public facing IP Address :$NC " ;myip
-    #echo -e "\n${RED}DNS Configuration:$NC " ; scutil --dns
-    echo
-}
-
 # Grabs headers from given url
 fn_curl_headers() { /usr/bin/curl -I -L $@ ; }
 
@@ -72,3 +59,25 @@ fn_curl_download() { /usr/bin/curl $@ -o /dev/null -w "dns: %{time_namelookup} c
 fn_eject_force() {
    hdiutil eject -force $@
 }
+
+# What keeps me. List of process using the given volume
+fn_wkm() {
+    sudo lsof | egrep "/Volumes/$1|PID"
+}
+
+info() {
+    echo -e "\nYou are logged on ${RED}$HOST"
+    echo -e "\nAdditionnal information:$NC " ; uname -a
+    echo -e "\n${RED}Users logged on:$NC " ; w -h
+    echo -e "\n${RED}Current date :$NC " ; date
+    echo -e "\n${RED}Machine stats :$NC " ; uptime
+    echo -e "\n${RED}Current network location :$NC " ; scselect
+    echo -e "\n${RED}My public IP :$NC " ; ip
+    echo
+}
+ip() { dig +short myip.opendns.com @resolver1.opendns.com; }
+trash() { command mv "$@" ~/.Trash; }
+psof() { ps -ef | grep "$@"; }
+eject() { hdiutil eject -force "$@"; }
+alias git-pull-all='find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull \;'
+rgrep() { grep -r "$1" *; }
